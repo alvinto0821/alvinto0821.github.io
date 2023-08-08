@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewpoint" content="widthedevice-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+        <link rel="stylesheet" href="css/style2.css">
+        <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+        <title>港島RP New News新聞台</title>
+    </head>
+    <body>
+        <header>
+            <div class="navbar">
+                <div class="logo"><img src="images/logo.png" alt="logo" herf="#"><a herf="#">New News新聞台</a></div>
+                <ul class="links">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="#">公告</a></li>
+                    <li><a href="#">員工名單</a></li>
+                    <li><a href="#">日報</a></li>
+                </ul>
+                <a href="#" class="action_btn">登入</a>
+                <div class="toggle_btn">
+                    <i class="fa-solid fa-bars"></i>
+                </div>
+
+                <div class="dropdown_menu">
+                    <li><a href="index.html">首頁</a></li>
+                    <li><a href="#">公告</a></li>
+                    <li><a href="#">員工名單</a></li>
+                    <li><a href="#">日報</a></li>
+                    <li><a href="#">登入</a></li>
+                </div>
+            </div>
+        </header> 
+
+        <main>
+            <section id="announcement" class="announcement">
+                <div class="intro" id="intro">
+                    <h1><u>New News 新聞台簡介</u></h1>
+                    <p>本新聞台為獨立媒體，致力於提供港島消息、資料及報導予大眾市民。
+                        所有新聞台員工均以此為己任，<br>為市民發放消息和發聲，
+                        推動城市向更好方向發展。
+                    </p>
+                </div>
+                <div class="statement" id="statement">
+                    <h1><u>聲明</u></h1>
+                    <p>New News新聞台為獨立媒體，有別於一般維穩官媒。
+                        本台立場和價值觀均以市民、民生為重，<br>絕不會受任何勢力或其他利益團體影響，並承諾始終以民生和市民的利益為重點。</p>
+                </div>
+                <div class="note" id="note">
+                    <h1><u>市民應注意事項</u></h1>
+                    <p>尊重New News新聞台員工的工作：<br>
+                        在拍攝或採訪時，請盡量避免阻擋鏡頭，並遵守現場工作人員的指示。<br><br>
+                        
+                        保持客觀和理性：<br>
+                        在觀看新聞時，請保持客觀和理性，不要被情緒和偏見左右。如有疑問或反饋，請理性表達和交流。<br><br>
+                        
+                        提供準確和可信的消息和資訊：<br>
+                        作為市民，我們每個人都有責任提供準確和可信的消息和資訊，幫助本台更好地履行其使命和目標。<br>假如你有任何新聞線索或信息，歡迎與我們聯繫。</p>
+                </div>
+            </section>
+        </main>
+
+        <script>
+            const toggleBtn = document.querySelector('.toggle_btn');
+            const toggleBtnIcon= document.querySelector('.toggle_btn i');
+            const dropdownMenu = document.querySelector('.dropdown_menu');
+
+            toggleBtn.onclick = function()
+            {
+                dropdownMenu.classList.toggle('open');
+                const isOpen = dropdownMenu.classList.contains('open');
+
+                toggleBtnIcon.classList = isOpen
+                    ? 'fa-solid fa-xmark'
+                    : 'fa-solid fa-bars'
+            }
+        </script>
+    </body>
+</html>
